@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inputFragment">
+
+    <fragment
+        android:id="@+id/inputFragment"
+        android:name="luky.zadanie.zadanie2.InputFragment"
+        android:label="Údaje"
+        tools:layout="@layout/fragment_input">
+        <action
+            android:id="@+id/action_inputFragment_to_showFragment2"
+            app:destination="@id/showFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showFragment"
+        android:name="luky.zadanie.zadanie2.ShowFragment"
+        android:label="Výsledok"
+        tools:layout="@layout/fragment_show">
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="shopName"
+            app:argType="string" />
+        <argument
+            android:name="gpsH"
+            app:argType="string" />
+        <argument
+            android:name="gpsL"
+            app:argType="string" />
+    </fragment>
+</navigation>
